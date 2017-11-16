@@ -19,6 +19,10 @@
     <![endif]-->
   </head>
   <body>
+      
+      
+      
+      
     <div class="wrapper">
       <header>
         <h2 class="header">BRAINSTREAM</h2>
@@ -36,17 +40,34 @@
 
         
       </header>
+        <div id="results" class="hidden"></div>
     <section id="example1">
         HELLO WORLD
     </section>
 
+<script src="/js/pdfobject.min.js"></script>
+<script>
 
+var options = {
+	pdfOpenParams: {
+		pagemode: "thumbs",
+		navpanes: 0,
+		toolbar: 0,
+		statusbar: 0,
+		view: "FitV"
+	}
+};
+
+var myPDF = PDFObject.embed("combinepdf.pdf", "#example1", options);
+
+var el = document.querySelector("#results");
+el.setAttribute("class", (myPDF) ? "success" : "fail");
+el.innerHTML = (myPDF) ? "PDFObject successfully added an &lt;embed> element to the page!" : "Uh-oh, the embed didn't work.";
+
+</script>
 
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
-  
-    <script src="pdfobject.js"></script>
-    <script>PDFObject.embed("combinepdf.pdf", "#example1");</script>
 </body>
 </html>
