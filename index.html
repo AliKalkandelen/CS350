@@ -51,7 +51,7 @@
 var options = {
 	pdfOpenParams: {
 		pagemode: "thumbs",
-		navpanes: 0,
+		navpanes: 1,
 		toolbar: 0,
 		statusbar: 0,
 		view: "FitV"
@@ -62,7 +62,7 @@ var myPDF = PDFObject.embed("combinepdf.pdf", "#example1", options);
 
 var el = document.querySelector("#results");
 el.setAttribute("class", (myPDF) ? "success" : "fail");
-el.innerHTML = (myPDF) ? "PDFObject successfully added an &lt;embed> element to the page!" : "Uh-oh, the embed didn't work.";
+el.innerHTML = (myPDF) ? "" : "The PDF embed Didn't Work. Please try another browser or deleting your cache and trying again.";
 
 </script>
 
