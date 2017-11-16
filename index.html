@@ -1,14 +1,16 @@
-<html lang="en-US"><head>
+<html lang="en-US">
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
 
-<title>CS350PROJEKT</title>
-<meta property="og:title" content="CS350">
-<meta property="og:locale" content="en_US">
-<meta name="description" content="CS 350 PROJECT FALL 2017">
-<meta property="og:description" content="CS 350 PROJECT FALL 2017">
-<meta property="og:url" content="https://alikalkandelen.github.io/CS350/">
+    <title>CS350PROJEKT</title>
+    <meta property="og:title" content="CS350">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="CS 350 PROJECT FALL 2017">
+    <meta property="og:description" content="CS 350 PROJECT FALL 2017">
+    <meta property="og:url" content="https://alikalkandelen.github.io/CS350/">
 
     <link href="https://fonts.googleapis.com/css?family=Arvo:400,700,400italic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://pages-themes.github.io/dinky/assets/css/style.css?v=46349262f43f70d5dc78cf83775850b0466aa573">
@@ -17,63 +19,47 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-	<style>
-	header{
-		padding: 34px 80px 22px 50px;
-		}
-		
-	</style>
-  </head>
-  <body>
-      
-      
-      
-      
+</head>
+
+<body>
+
+
+
+
     <div class="wrapper">
-      <header>
-        <h1 class="header">BRAINSTREAM</h1>
-        <p class="header">CS350 PROJECT FALL 2017</p>
+        <header>
+            <h2 class="header">BRAINSTREAM</h2>
+            <p class="header">CS350 PROJECT FALL 2017</p>
 
-        <ul>
-          
-            <li class="download"><a class="buttons" href="combinepdf.pdf">Download PDF</a></li>
-            <li class="download"><a class="buttons" href="https://github.com/pages-themes/dinky/tarball/master">Download ZIP</a></li>
-        </ul>
+            <ul>
 
-        
-          <p>Ali Kalkandelen <br> Samuel Owusu-Biney <br> Stephen Kilnisan</p>
-        
+                <li class="download"><a class="buttons" href="combinepdf.pdf">Download PDF</a>
+                </li>
+                <li class="download"><a class="buttons" href="https://github.com/pages-themes/dinky/tarball/master">Download ZIP</a>
+                </li>
+            </ul>
 
-        
-      </header>
+
+            <p>Ali Kalkandelen
+                <br> Samuel Owusu-Biney
+                <br> Stephen Kilnisan</p>
+
+
+
+        </header>
         <div id="results" class="hidden"></div>
-    <section id="example1">
-        HELLO WORLD
-    </section>
+        <section id="example1">
+            HELLO WORLD
+        </section>
 
-<script src="pdfobject.min.js"></script>
-<script>
-
-var options = {
-	pdfOpenParams: {
-		pagemode: "thumbs",
-		navpanes: 1,
-		toolbar: 0,
-		statusbar: 0,
-		view: "FitV"
-	}
-};
-
-var myPDF = PDFObject.embed("combinepdf.pdf", "#example1", options);
-
-var el = document.querySelector("#results");
-el.setAttribute("class", (myPDF) ? "success" : "fail");
-el.innerHTML = (myPDF) ? "" : "The PDF embed Didn't Work. Please try another browser or deleting your cache and trying again.";
-
-</script>
+        <script src="/js/pdfobject.min.js"></script>
+        <script>
+            var myPDF = PDFObject.embed("combinepdf.pdf", "#example1");
+        </script>
 
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+
 </body>
+
 </html>
